@@ -15,7 +15,7 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser(request):
     browser_name = request.config.getoption("browser_name")  # запрос, get и use браузера из команды запуска теста
-    user_language = request.config.getoption("language")     # запрос, get и use языка из команды запуска теста
+    user_language = request.config.getoption("language")     # запрос, get и use язык из команды запуска теста
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
         # назначаем язык браузера, используя Класс Option и метод add.experemental_option
